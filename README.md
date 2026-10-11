@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Sitio web — Dr. Simón Duque Solórzano (cardiología pediátrica)
 
-## Getting Started
+Sitio informativo y carta de presentación (Fase 1). Stack: Next.js 16, React 19, Tailwind CSS 4.
 
-First, run the development server:
+## Desarrollo
 
 ```bash
+cd C:\Users\sheid\Projects\dr-simon-duque-web
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abrir [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Configuración
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Editar `src/lib/site-config.ts`:
 
-## Learn More
+- Teléfono y WhatsApp (`whatsappNumber` sin signo +, ej. `593991234567`)
+- Correo real
+- Horarios, estacionamiento, URL de agendamiento (`bookingUrl`)
+- Biografía en `src/app/sobre-mi/page.tsx`
 
-To learn more about Next.js, take a look at the following resources:
+## Producción
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+npm run build
+npm run start
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Despliegue recomendado: [Vercel](https://vercel.com) conectado al repositorio git.
 
-## Deploy on Vercel
+## Rutas
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+| Ruta | Descripción |
+|------|-------------|
+| `/` | Inicio |
+| `/servicios` | Servicios de cardiología pediátrica |
+| `/sobre-mi` | Biografía |
+| `/consultorio` | Ubicación y mapa |
+| `/pacientes` | Preparación para la cita |
+| `/contacto` | WhatsApp y formulario |
+| `/privacidad` | Aviso LOPDP |

@@ -1,69 +1,87 @@
-import Image from "next/image";
+import Link from "next/link";
+import { CTAButtons } from "@/components/CTAButtons";
+import { DoctorPortrait } from "@/components/DoctorPortrait";
+import { FAQ } from "@/components/FAQ";
+import { SectionHeading } from "@/components/SectionHeading";
+import { homeServiceHighlights } from "@/lib/services";
+import { siteConfig } from "@/lib/site-config";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
+    <>
+      <section className="relative overflow-hidden bg-gradient-to-br from-teal-950 via-teal-900 to-slate-950 text-white">
+        <div
+          className="pointer-events-none absolute -right-24 top-0 h-96 w-96 rounded-full bg-teal-400/10 blur-3xl"
+          aria-hidden
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+        <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1fr_auto]">
+          <div>
+            <p className="text-sm font-medium uppercase tracking-wider text-teal-200/90">
+              {siteConfig.city}, {siteConfig.region}
+            </p>
+            <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
+              {siteConfig.title}
+            </h1>
+            <p className="mt-2 text-xl text-teal-50/95">{siteConfig.name}</p>
+            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-teal-50/90">
+              {siteConfig.description}
+            </p>
+            <CTAButtons className="mt-10" />
+          </div>
+          <DoctorPortrait className="mx-auto lg:mx-0" priority />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <SectionHeading
+          eyebrow="Enfoque clínico"
+          title="Cuidado del corazón en cada etapa de la infancia"
+          description="Desde la valoración de un soplo en el recién nacido hasta el seguimiento de cardiopatías congénitas en la adolescencia, con explicaciones claras para las familias."
+        />
+        <ul className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {homeServiceHighlights.map((item) => (
+            <li
+              key={item}
+              className="rounded-2xl border border-slate-200 bg-white px-5 py-4 text-sm font-medium text-slate-800 shadow-sm"
+            >
+              {item}
+            </li>
+          ))}
+        </ul>
+        <p className="mt-8">
+          <Link
+            href="/servicios"
+            className="text-sm font-semibold text-teal-800 hover:underline"
           >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
+            Ver todos los servicios →
+          </Link>
+        </p>
+      </section>
+
+      <section className="border-y border-slate-200 bg-white">
+        <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 md:flex md:items-center md:justify-between md:gap-12">
+          <div className="max-w-xl">
+            <SectionHeading
+              eyebrow="Próximos pasos del proyecto"
+              title="Su consultorio, más accesible"
+              description="Este sitio es la primera fase: presencia profesional y contacto directo. Las siguientes fases pueden incluir agenda en línea sincronizada, recordatorios por correo y archivo digital de pacientes, siempre con su autorización."
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+          </div>
+          <div className="mt-8 md:mt-0">
+            <CTAButtons layout="column" />
+          </div>
         </div>
-      </main>
-    </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <SectionHeading
+          eyebrow="Preguntas frecuentes"
+          title="Información para padres y madres"
+        />
+        <div className="mt-10">
+          <FAQ />
+        </div>
+      </section>
+    </>
   );
 }

@@ -1,0 +1,64 @@
+import type { Metadata } from "next";
+import { CTAButtons } from "@/components/CTAButtons";
+import { SectionHeading } from "@/components/SectionHeading";
+import { siteConfig } from "@/lib/site-config";
+
+export const metadata: Metadata = {
+  title: "Consultorio",
+  description: `Ubicación, horarios y cómo llegar al consultorio del ${siteConfig.name} en Guayaquil.`,
+};
+
+export default function ConsultorioPage() {
+  const { address, hours, parking } = siteConfig;
+  const mapsEmbed = `https://www.google.com/maps?q=${address.mapsQuery}&output=embed`;
+
+  return (
+    <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
+      <SectionHeading
+        eyebrow="Consultorio"
+        title="Atención en Guayaquil"
+        description="Dirección referencial según directorios públicos. Confirme torre, piso, consultorio y referencias con el médico antes de publicar."
+      />
+
+      <div className="mt-10 grid gap-8 lg:grid-cols-2">
+        <div className="space-y-6">
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 className="font-semibold text-slate-900">Dirección</h2>
+            <p className="mt-2 text-slate-700">
+              {address.street}
+              <br />
+              {address.city}, {address.postalCode}
+              <br />
+              {address.province}, {address.country}
+            </p>
+          </div>
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 className="font-semibold text-slate-900">Horarios</h2>
+            <ul className="mt-3 space-y-2 text-slate-700">
+              {hours.map((h) => (
+                <li key={h.days} className="flex justify-between gap-4 text-sm">
+                  <span>{h.days}</span>
+                  <span className="font-medium">{h.time}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+            <h2 className="font-semibold text-slate-900">Estacionamiento</h2>
+            <p className="mt-2 text-sm text-slate-700">{parking}</p>
+          </div>
+          <CTAButtons />
+        </div>
+        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm">
+          <iframe
+            title="Mapa del consultorio"
+            src={mapsEmbed}
+            className="h-[min(420px,70vh)] w-full border-0"
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </div>
+    </div>
+  );
+}
