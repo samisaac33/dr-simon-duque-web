@@ -17,9 +17,7 @@ export function Header() {
             <p className="truncate text-sm font-semibold text-teal-900">
               {siteConfig.name}
             </p>
-            <p className="truncate text-xs text-slate-600">
-              {siteConfig.specialty} · {siteConfig.city}
-            </p>
+            <p className="truncate text-xs text-slate-600">Cardiólogo</p>
           </div>
         </Link>
         <nav
