@@ -35,7 +35,7 @@ export default function ServiciosPage() {
                   key={item}
                   className="flex gap-2 text-sm leading-relaxed text-slate-700"
                 >
-                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-teal-600" />
+                  <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-red-600" />
                   {item}
                 </li>
               ))}
@@ -48,7 +48,7 @@ export default function ServiciosPage() {
         <p className="text-sm text-slate-700">
           Los servicios concretos disponibles en consultorio (por ejemplo,
           ecocardiograma en el mismo lugar) se confirman al agendar.{" "}
-          <Link href="/contacto" className="font-semibold text-teal-800 hover:underline">
+          <Link href="/contacto" className="font-semibold text-red-800 hover:underline">
             Contáctenos
           </Link>{" "}
           para orientación.

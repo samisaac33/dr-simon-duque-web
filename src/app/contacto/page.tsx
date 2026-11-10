@@ -34,7 +34,7 @@ export default function ContactoPage() {
                   href={`https://wa.me/${siteConfig.contact.whatsappNumber}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-teal-800 hover:underline"
+                  className="text-red-800 hover:underline"
                 >
                   {siteConfig.contact.mobileDisplay}
                 </a>
@@ -47,7 +47,7 @@ export default function ContactoPage() {
                   <a
                     key={line.tel}
                     href={`tel:${line.tel}`}
-                    className="block text-teal-800 hover:underline"
+                    className="block text-red-800 hover:underline"
                   >
                     {line.display}
                   </a>
@@ -59,7 +59,7 @@ export default function ContactoPage() {
               <dd className="font-medium text-slate-900">
                 <a
                   href={`mailto:${siteConfig.contact.email}`}
-                  className="text-teal-800 hover:underline"
+                  className="text-red-800 hover:underline"
                 >
                   {siteConfig.contact.email}
                 </a>
@@ -79,7 +79,7 @@ export default function ContactoPage() {
                   href={siteConfig.address.mapsUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-teal-800 hover:underline"
+                  className="text-red-800 hover:underline"
                 >
                   Ver en Google Maps
                 </a>
@@ -104,7 +104,7 @@ export default function ContactoPage() {
               name="nombre"
               type="text"
               required
-              className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-teal-600 focus:ring-2"
+              className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-red-600 focus:ring-2"
             />
           </label>
           <label className="mt-4 block text-sm font-medium text-slate-800">
@@ -113,7 +113,7 @@ export default function ContactoPage() {
               name="telefono"
               type="tel"
               required
-              className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-teal-600 focus:ring-2"
+              className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-red-600 focus:ring-2"
             />
           </label>
           <label className="mt-4 block text-sm font-medium text-slate-800">
@@ -122,7 +122,7 @@ export default function ContactoPage() {
               name="paciente"
               type="text"
               required
-              className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-teal-600 focus:ring-2"
+              className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-red-600 focus:ring-2"
             />
           </label>
           <label className="mt-4 block text-sm font-medium text-slate-800">
@@ -130,12 +130,12 @@ export default function ContactoPage() {
             <textarea
               name="motivo"
               rows={4}
-              className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-teal-600 focus:ring-2"
+              className="mt-1 w-full rounded-lg border border-slate-300 px-3 py-2 text-sm outline-none ring-red-600 focus:ring-2"
             />
           </label>
           <button
             type="submit"
-            className="mt-6 w-full rounded-full bg-teal-700 py-3 text-sm font-semibold text-white hover:bg-teal-800"
+            className="mt-6 w-full rounded-full bg-red-700 py-3 text-sm font-semibold text-white hover:bg-red-800"
           >
             Enviar solicitud por correo
           </button>

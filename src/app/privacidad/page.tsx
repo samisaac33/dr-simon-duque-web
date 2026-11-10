@@ -57,7 +57,7 @@ export default function PrivacidadPage() {
             escribiendo a{" "}
             <a
               href={`mailto:${siteConfig.contact.email}`}
-              className="text-teal-800 hover:underline"
+              className="text-red-800 hover:underline"
             >
               {siteConfig.contact.email}
             </a>

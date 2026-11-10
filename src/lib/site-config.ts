@@ -53,9 +53,9 @@ export const siteConfig = {
   /** Poner true cuando exista public/doctor.jpg */
   doctorPhotoEnabled: true,
   theme: {
-    primary: "#0f766e",
-    primaryDark: "#115e59",
-    accent: "#2dd4bf",
+    primary: "#b91c1c",
+    primaryDark: "#991b1b",
+    accent: "#f87171",
   },
 } as const;
 

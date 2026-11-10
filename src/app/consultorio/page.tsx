@@ -41,7 +41,7 @@ export default function ConsultorioPage() {
               href={address.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="mt-4 inline-block text-sm font-semibold text-teal-800 hover:underline"
+              className="mt-4 inline-block text-sm font-semibold text-red-800 hover:underline"
             >
               Abrir en Google Maps →
             </a>

@@ -17,7 +17,7 @@ export function Footer() {
               href={siteConfig.address.mapsUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-teal-800 hover:underline"
+              className="text-red-800 hover:underline"
             >
               {fullAddress}
             </a>
@@ -30,7 +30,7 @@ export function Footer() {
               <li key={href}>
                 <Link
                   href={href}
-                  className="text-sm text-teal-800 hover:underline"
+                  className="text-sm text-red-800 hover:underline"
                 >
                   {label}
                 </Link>
@@ -39,7 +39,7 @@ export function Footer() {
             <li>
               <Link
                 href="/privacidad"
-                className="text-sm text-teal-800 hover:underline"
+                className="text-sm text-red-800 hover:underline"
               >
                 Privacidad
               </Link>
