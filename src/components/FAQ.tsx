@@ -29,7 +29,7 @@ export function FAQ() {
           <summary className="cursor-pointer list-none font-medium text-slate-900 marker:content-none [&::-webkit-details-marker]:hidden">
             <span className="flex items-center justify-between gap-4">
               {item.q}
-              <span className="text-teal-700 transition group-open:rotate-45">
+              <span className="text-red-700 transition group-open:rotate-45">
                 +
               </span>
             </span>

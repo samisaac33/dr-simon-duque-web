@@ -23,7 +23,7 @@ export function CTAButtons({
   const mapButtonClass =
     tone === "dark"
       ? "inline-flex items-center justify-center rounded-full border border-white/45 px-6 py-3 text-sm font-semibold text-white transition hover:bg-white/10"
-      : "inline-flex items-center justify-center rounded-full border border-teal-700/40 px-6 py-3 text-sm font-semibold text-slate-800 transition hover:border-teal-700 hover:bg-teal-50/80";
+      : "inline-flex items-center justify-center rounded-full border border-red-700/40 px-6 py-3 text-sm font-semibold text-slate-800 transition hover:border-red-700 hover:bg-red-50/80";
 
   return (
     <div className={`${flex} ${className}`}>
@@ -31,7 +31,7 @@ export function CTAButtons({
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center justify-center rounded-full bg-teal-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-teal-800"
+        className="inline-flex items-center justify-center rounded-full bg-red-700 px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-red-800"
       >
         Solicitar cita
       </a>

@@ -19,7 +19,7 @@ export function FloatingWhatsApp() {
       href={getWhatsAppUrl()}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-slate-900/25 ring-2 ring-white transition hover:scale-105 hover:bg-[#20bd5a] focus:outline-none focus-visible:ring-4 focus-visible:ring-teal-500"
+      className="fixed bottom-5 right-5 z-40 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg shadow-slate-900/25 ring-2 ring-white transition hover:scale-105 hover:bg-[#20bd5a] focus:outline-none focus-visible:ring-4 focus-visible:ring-red-500"
       aria-label="Solicitar cita por WhatsApp"
       title="Solicitar cita"
     >

@@ -18,7 +18,7 @@ export function DoctorPortrait({
   const hasPhoto = siteConfig.doctorPhotoEnabled;
   const frame =
     variant === "hero"
-      ? "border-white/20 bg-teal-950/40 shadow-2xl ring-white/10"
+      ? "border-white/20 bg-red-950/40 shadow-2xl ring-white/10"
       : "border-slate-200 bg-white shadow-md ring-slate-200/80";
 
   return (
@@ -38,26 +38,26 @@ export function DoctorPortrait({
         <div
           className={`flex h-full flex-col items-center justify-center px-6 text-center ${
             variant === "hero"
-              ? "bg-gradient-to-b from-teal-800/80 to-slate-900/90"
-              : "bg-gradient-to-b from-slate-50 to-teal-50/80"
+              ? "bg-gradient-to-b from-red-800/80 to-slate-900/90"
+              : "bg-gradient-to-b from-slate-50 to-red-50/80"
           }`}
         >
           <div
             className={`flex h-24 w-24 items-center justify-center rounded-full border-2 border-dashed text-2xl font-semibold ${
               variant === "hero"
-                ? "border-teal-200/50 bg-teal-900/50 text-teal-100"
-                : "border-teal-300 bg-white text-teal-800"
+                ? "border-red-200/50 bg-red-900/50 text-red-100"
+                : "border-red-300 bg-white text-red-800"
             }`}
           >
             SD
           </div>
           <p
-            className={`mt-4 text-sm font-medium ${variant === "hero" ? "text-teal-50" : "text-slate-800"}`}
+            className={`mt-4 text-sm font-medium ${variant === "hero" ? "text-red-50" : "text-slate-800"}`}
           >
             Foto profesional
           </p>
           <p
-            className={`mt-1 text-xs ${variant === "hero" ? "text-teal-100/70" : "text-slate-500"}`}
+            className={`mt-1 text-xs ${variant === "hero" ? "text-red-100/70" : "text-slate-500"}`}
           >
             Agregue <code className="rounded bg-black/10 px-1">public/doctor.jpg</code>
           </p>

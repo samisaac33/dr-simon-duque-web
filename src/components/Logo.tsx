@@ -5,8 +5,8 @@ type Props = {
 
 /** Marca simple: corazón pediátrico + pulso. */
 export function Logo({ className = "h-10 w-10", variant = "dark" }: Props) {
-  const stroke = variant === "light" ? "#f0fdfa" : "#0f766e";
-  const fill = variant === "light" ? "#5eead4" : "#14b8a6";
+  const stroke = variant === "light" ? "#fef2f2" : "#991b1b";
+  const fill = variant === "light" ? "#fca5a5" : "#dc2626";
 
   return (
     <svg
@@ -16,7 +16,7 @@ export function Logo({ className = "h-10 w-10", variant = "dark" }: Props) {
       xmlns="http://www.w3.org/2000/svg"
       aria-hidden
     >
-      <rect width="48" height="48" rx="12" className="fill-teal-50" />
+      <rect width="48" height="48" rx="12" className="fill-red-50" />
       <path
         d="M24 34s-8-5.2-8-11.2c0-3.2 2.4-5.6 5.6-5.6 1.8 0 3.4.9 4.4 2.2 1-1.3 2.6-2.2 4.4-2.2 3.2 0 5.6 2.4 5.6 5.6C32 28.8 24 34 24 34z"
         fill={fill}

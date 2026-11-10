@@ -14,7 +14,7 @@ export function Header() {
         <Link href="/" className="group flex min-w-0 items-center gap-3">
           <Logo className="h-11 w-11 shrink-0 shadow-sm" />
           <div className="min-w-0">
-            <p className="truncate text-sm font-semibold text-teal-900">
+            <p className="truncate text-sm font-semibold text-red-900">
               {siteConfig.name}
             </p>
             <p className="truncate text-xs text-slate-600">Cardiólogo</p>
@@ -35,7 +35,7 @@ export function Header() {
                 href={href}
                 className={`rounded-lg px-3 py-2 text-sm font-medium transition-colors ${
                   active
-                    ? "bg-teal-50 text-teal-900"
+                    ? "bg-red-50 text-red-900"
                     : "text-slate-700 hover:bg-slate-50 hover:text-slate-900"
                 }`}
               >
@@ -46,7 +46,7 @@ export function Header() {
         </nav>
         <Link
           href="/contacto"
-          className="shrink-0 rounded-full bg-teal-700 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-teal-800"
+          className="shrink-0 rounded-full bg-red-700 px-4 py-2 text-sm font-semibold text-white shadow-sm transition hover:bg-red-800"
         >
           Agendar
         </Link>

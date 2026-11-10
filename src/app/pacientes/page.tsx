@@ -40,7 +40,7 @@ export default function PacientesPage() {
           <ul className="mt-4 space-y-2">
             {bringList.map((item) => (
               <li key={item} className="flex gap-2 text-sm text-slate-700">
-                <span className="text-teal-700">✓</span>
+                <span className="text-red-700">✓</span>
                 {item}
               </li>
             ))}
@@ -72,7 +72,7 @@ export default function PacientesPage() {
 
       <p className="mt-8 text-sm text-slate-600">
         ¿Listo para agendar?{" "}
-        <Link href="/contacto" className="font-semibold text-teal-800 hover:underline">
+        <Link href="/contacto" className="font-semibold text-red-800 hover:underline">
           Vaya a contacto
         </Link>
         .
