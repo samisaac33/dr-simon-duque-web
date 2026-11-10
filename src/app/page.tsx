@@ -17,7 +17,7 @@ export default function Home() {
         <div className="mx-auto grid max-w-6xl items-center gap-12 px-4 py-16 sm:px-6 sm:py-24 lg:grid-cols-[1fr_auto]">
           <div>
             <p className="text-sm font-medium uppercase tracking-wider text-teal-200/90">
-              {siteConfig.city}, {siteConfig.region}
+              {siteConfig.city}, Ecuador
             </p>
             <h1 className="mt-4 max-w-3xl text-4xl font-semibold leading-tight tracking-tight sm:text-5xl">
               {siteConfig.title}
