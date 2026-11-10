@@ -18,6 +18,11 @@ export default function ContactoPage() {
         description="Escriba por WhatsApp, llame al consultorio o complete el formulario. Recepción confirmará disponibilidad y documentos a traer."
       />
 
+      <MapsEmbed
+        className="mt-8"
+        heightClass="h-[min(320px,50vh)] sm:h-[min(400px,55vh)]"
+      />
+
       <div className="mt-10 grid gap-10 lg:grid-cols-2">
         <div>
           <CTAButtons layout="column" />
@@ -81,7 +86,6 @@ export default function ContactoPage() {
               </dd>
             </div>
           </dl>
-          <MapsEmbed className="mt-6" />
         </div>
 
         <form
