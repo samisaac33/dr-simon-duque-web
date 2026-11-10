@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CTAButtons } from "@/components/CTAButtons";
+import { MapsEmbed } from "@/components/MapsEmbed";
 import { SectionHeading } from "@/components/SectionHeading";
 import { siteConfig } from "@/lib/site-config";
 
@@ -80,6 +81,7 @@ export default function ContactoPage() {
               </dd>
             </div>
           </dl>
+          <MapsEmbed className="mt-6" />
         </div>
 
         <form

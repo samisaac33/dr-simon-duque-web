@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CTAButtons } from "@/components/CTAButtons";
+import { MapsEmbed } from "@/components/MapsEmbed";
 import { SectionHeading } from "@/components/SectionHeading";
 import { siteConfig } from "@/lib/site-config";
 
@@ -10,7 +11,6 @@ export const metadata: Metadata = {
 
 export default function ConsultorioPage() {
   const { address, hours, parking } = siteConfig;
-  const mapsEmbed = `https://www.google.com/maps?q=${address.mapsQuery}&output=embed`;
 
   return (
     <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6 sm:py-16">
@@ -63,15 +63,7 @@ export default function ConsultorioPage() {
           </div>
           <CTAButtons />
         </div>
-        <div className="overflow-hidden rounded-2xl border border-slate-200 bg-slate-100 shadow-sm">
-          <iframe
-            title="Mapa del consultorio"
-            src={mapsEmbed}
-            className="h-[min(420px,70vh)] w-full border-0"
-            loading="lazy"
-            referrerPolicy="no-referrer-when-downgrade"
-          />
-        </div>
+        <MapsEmbed heightClass="h-[min(420px,70vh)]" />
       </div>
     </div>
   );
