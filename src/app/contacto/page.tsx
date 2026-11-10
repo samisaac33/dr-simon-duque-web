@@ -14,7 +14,7 @@ export default function ContactoPage() {
       <SectionHeading
         eyebrow="Contacto"
         title="Agendar una cita"
-        description="Escriba por WhatsApp o complete el formulario. Recepción confirmará disponibilidad, dirección exacta del consultorio y documentos a traer."
+        description="Escriba por WhatsApp, llame al consultorio o complete el formulario. Recepción confirmará disponibilidad y documentos a traer."
       />
 
       <div className="mt-10 grid gap-10 lg:grid-cols-2">
@@ -22,9 +22,30 @@ export default function ContactoPage() {
           <CTAButtons layout="column" />
           <dl className="mt-8 space-y-4 rounded-2xl border border-slate-200 bg-white p-6 text-sm">
             <div>
-              <dt className="text-slate-500">Teléfono</dt>
+              <dt className="text-slate-500">Celular / WhatsApp</dt>
               <dd className="font-medium text-slate-900">
-                {siteConfig.contact.phoneDisplay}
+                <a
+                  href={`https://wa.me/${siteConfig.contact.whatsappNumber}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-teal-800 hover:underline"
+                >
+                  {siteConfig.contact.mobileDisplay}
+                </a>
+              </dd>
+            </div>
+            <div>
+              <dt className="text-slate-500">Consultorio</dt>
+              <dd className="font-medium text-slate-900">
+                {siteConfig.contact.landlines.map((line) => (
+                  <a
+                    key={line.tel}
+                    href={`tel:${line.tel}`}
+                    className="block text-teal-800 hover:underline"
+                  >
+                    {line.display}
+                  </a>
+                ))}
               </dd>
             </div>
             <div>
@@ -39,9 +60,23 @@ export default function ContactoPage() {
               </dd>
             </div>
             <div>
-              <dt className="text-slate-500">Ciudad</dt>
+              <dt className="text-slate-500">Ubicación</dt>
               <dd className="font-medium text-slate-900">
-                {siteConfig.city}, {siteConfig.region}
+                {siteConfig.address.facility}
+                <br />
+                {siteConfig.address.building}, {siteConfig.address.floor},{" "}
+                {siteConfig.address.office}
+                <br />
+                {siteConfig.address.street}
+                <br />
+                <a
+                  href={siteConfig.address.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-teal-800 hover:underline"
+                >
+                  Ver en Google Maps
+                </a>
               </dd>
             </div>
           </dl>

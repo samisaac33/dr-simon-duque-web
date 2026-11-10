@@ -3,7 +3,8 @@ import { navLinks, siteConfig } from "@/lib/site-config";
 
 export function Footer() {
   const year = 2026;
-  const fullAddress = `${siteConfig.address.street}, ${siteConfig.address.city}`;
+  const { address } = siteConfig;
+  const fullAddress = `${address.facility}, ${address.office}, ${address.city}`;
 
   return (
     <footer className="mt-auto border-t border-slate-200 bg-slate-50">
@@ -11,7 +12,16 @@ export function Footer() {
         <div>
           <p className="font-semibold text-slate-900">{siteConfig.name}</p>
           <p className="mt-1 text-sm text-slate-600">{siteConfig.title}</p>
-          <p className="mt-3 text-sm text-slate-600">{fullAddress}</p>
+          <p className="mt-3 text-sm text-slate-600">
+            <a
+              href={siteConfig.address.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-teal-800 hover:underline"
+            >
+              {fullAddress}
+            </a>
+          </p>
         </div>
         <div>
           <p className="text-sm font-semibold text-slate-900">Enlaces</p>
