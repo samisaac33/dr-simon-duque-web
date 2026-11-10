@@ -3,7 +3,8 @@ import { navLinks, siteConfig } from "@/lib/site-config";
 
 export function Footer() {
   const year = 2026;
-  const fullAddress = `${siteConfig.address.street}, ${siteConfig.address.city}`;
+  const { address } = siteConfig;
+  const fullAddress = `${address.facility}, ${address.office}, ${address.city}`;
 
   return (
     <footer className="mt-auto border-t border-slate-200 bg-slate-50">

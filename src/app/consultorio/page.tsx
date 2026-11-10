@@ -17,7 +17,7 @@ export default function ConsultorioPage() {
       <SectionHeading
         eyebrow="Consultorio"
         title="Atención en Guayaquil"
-        description="Ubicación del consultorio en Guayaquil. Confirme piso, consultorio y referencias con recepción al agendar."
+        description={`Consultorio en ${address.facility}, ${address.building}, ${address.office}.`}
       />
 
       <div className="mt-10 grid gap-8 lg:grid-cols-2">
@@ -25,6 +25,12 @@ export default function ConsultorioPage() {
           <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
             <h2 className="font-semibold text-slate-900">Dirección</h2>
             <p className="mt-2 text-slate-700">
+              {address.facility}
+              <br />
+              {address.building}, {address.floor}
+              <br />
+              {address.office}
+              <br />
               {address.street}
               <br />
               {address.city}, {address.postalCode}

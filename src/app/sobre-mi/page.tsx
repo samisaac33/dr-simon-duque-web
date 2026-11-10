@@ -15,7 +15,7 @@ export default function SobreMiPage() {
       <SectionHeading
         eyebrow="Sobre mí"
         title={siteConfig.name}
-        description="Espacio para su trayectoria profesional. Sustituya este texto por su biografía verificada (formación, subespecialidad, hospitales, sociedades médicas)."
+        description="Cardiólogo con práctica en adultos y niños, orientado a cardiopatías congénitas y atención familiar en Guayaquil."
       />
 
       <div className="mt-10 grid gap-8 lg:grid-cols-[1fr_300px]">
@@ -27,20 +27,24 @@ export default function SobreMiPage() {
             seguimiento a largo plazo en cardiopatías congénitas y adquiridas.
           </p>
           <p>
-            Según información pública en directorios médicos, cuenta con
-            consultorio en Guayaquil y experiencia en cardiología general,
-            check-up cardiológico, insuficiencia cardíaca, valoración cardíaca
-            y seguimiento de pacientes post-trasplante cardíaco. Confirme y
-            amplíe estos datos con el doctor antes de publicar.
+            Atiende en Omni Hospital (Torre Médica I, consultorio 315) en
+            Guayaquil. Puede ampliar aquí su trayectoria académica, hospitalaria
+            y membresías en sociedades médicas.
           </p>
           <h2 className="text-lg font-semibold text-slate-900">
-            Formación y membresías
+            Áreas de práctica
           </h2>
           <ul className="list-inside list-disc space-y-2 text-slate-700">
-            <li>Título de medicina — [Universidad, año]</li>
-            <li>Residencia / especialización en cardiología — [Institución]</li>
-            <li>Subespecialización en cardiología pediátrica — [Si aplica]</li>
-            <li>Miembro de — [Sociedad Ecuatoriana de Cardiología, etc.]</li>
+            {siteConfig.subspecialties.map((item) => (
+              <li key={item}>{item}</li>
+            ))}
+          </ul>
+          <h2 className="text-lg font-semibold text-slate-900">
+            Registro profesional
+          </h2>
+          <ul className="list-inside list-disc space-y-2 text-slate-700">
+            <li>{siteConfig.credentials.msp}</li>
+            <li>{siteConfig.credentials.registration}</li>
           </ul>
         </div>
         <aside className="order-1 lg:order-2">
@@ -58,6 +62,12 @@ export default function SobreMiPage() {
             <div>
               <dt className="text-slate-500">Ciudad</dt>
               <dd className="font-medium text-slate-800">{siteConfig.city}</dd>
+            </div>
+            <div>
+              <dt className="text-slate-500">Consultorio</dt>
+              <dd className="font-medium text-slate-800">
+                {siteConfig.address.facility}, {siteConfig.address.office}
+              </dd>
             </div>
             <div>
               <dt className="text-slate-500">Idiomas</dt>
