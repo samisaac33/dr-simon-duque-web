@@ -26,7 +26,7 @@ export default function Home() {
             <p className="mt-6 max-w-2xl text-lg leading-relaxed text-teal-50/90">
               {siteConfig.description}
             </p>
-            <CTAButtons className="mt-10" />
+            <CTAButtons className="mt-10" tone="dark" />
           </div>
           <DoctorPortrait className="mx-auto lg:mx-0" priority />
         </div>
