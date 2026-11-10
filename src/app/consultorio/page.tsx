@@ -17,7 +17,7 @@ export default function ConsultorioPage() {
       <SectionHeading
         eyebrow="Consultorio"
         title="Atención en Guayaquil"
-        description="Dirección referencial según directorios públicos. Confirme torre, piso, consultorio y referencias con el médico antes de publicar."
+        description="Ubicación del consultorio en Guayaquil. Confirme piso, consultorio y referencias con recepción al agendar."
       />
 
       <div className="mt-10 grid gap-8 lg:grid-cols-2">
@@ -31,6 +31,14 @@ export default function ConsultorioPage() {
               <br />
               {address.province}, {address.country}
             </p>
+            <a
+              href={address.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-block text-sm font-semibold text-teal-800 hover:underline"
+            >
+              Abrir en Google Maps →
+            </a>
           </div>
           <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
             <h2 className="font-semibold text-slate-900">Horarios</h2>

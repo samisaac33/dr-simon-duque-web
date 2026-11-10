@@ -39,9 +39,18 @@ export default function ContactoPage() {
               </dd>
             </div>
             <div>
-              <dt className="text-slate-500">Ciudad</dt>
+              <dt className="text-slate-500">Ubicación</dt>
               <dd className="font-medium text-slate-900">
-                {siteConfig.city}, {siteConfig.region}
+                {siteConfig.address.street}
+                <br />
+                <a
+                  href={siteConfig.address.mapsUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-teal-800 hover:underline"
+                >
+                  Ver en Google Maps
+                </a>
               </dd>
             </div>
           </dl>

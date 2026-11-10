@@ -8,13 +8,15 @@ export const siteConfig = {
   description:
     "Atención especializada del corazón en lactantes, niños, niñas y adolescentes. Evaluación de soplos, cardiopatías congénitas, ecocardiografía y seguimiento a largo plazo.",
   address: {
-    street: "Calle 13E NE",
+    street: "Omni Hospital, Av. Juan Tanca Marengo y Calle 13E NE",
     city: "Guayaquil",
-    postalCode: "90513",
+    postalCode: "090513",
     province: "Guayas",
     country: "Ecuador",
-    /** Referencia visible en mapa (ajustar coordenadas cuando se confirme consultorio). */
-    mapsQuery: "Calle+13E+NE+Guayaquil+Guayas+Ecuador",
+    /** Consulta para el mapa embebido (misma ubicación que mapsUrl). */
+    mapsQuery:
+      "Omni+Hospital,+Av.+Juan+Tanca+Marengo+y+Calle+13E+NE,+090513+Guayaquil",
+    mapsUrl: "https://maps.app.goo.gl/mHp4eZGctTyJw6Be8",
   },
   contact: {
     /** Reemplazar con número real, formato internacional sin + para wa.me */

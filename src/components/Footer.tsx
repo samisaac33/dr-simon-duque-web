@@ -11,7 +11,16 @@ export function Footer() {
         <div>
           <p className="font-semibold text-slate-900">{siteConfig.name}</p>
           <p className="mt-1 text-sm text-slate-600">{siteConfig.title}</p>
-          <p className="mt-3 text-sm text-slate-600">{fullAddress}</p>
+          <p className="mt-3 text-sm text-slate-600">
+            <a
+              href={siteConfig.address.mapsUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-teal-800 hover:underline"
+            >
+              {fullAddress}
+            </a>
+          </p>
         </div>
         <div>
           <p className="text-sm font-semibold text-slate-900">Enlaces</p>
