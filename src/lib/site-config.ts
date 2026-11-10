@@ -51,7 +51,7 @@ export const siteConfig = {
   /** URL de agendamiento online (Cal.com, Google Calendar, etc.) */
   bookingUrl: "",
   /** Poner true cuando exista public/doctor.jpg */
-  doctorPhotoEnabled: false,
+  doctorPhotoEnabled: true,
   theme: {
     primary: "#0f766e",
     primaryDark: "#115e59",
